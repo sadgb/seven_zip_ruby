@@ -29,8 +29,8 @@ def create_p7zip_makefile(type)
 
   makefile_content = <<"EOS"
 ALLFLAGS=#{allflags} $(LOCAL_FLAGS)
-CXX=#{config['CXX']} $(ALLFLAGS)
-CC=#{config['CC']} $(ALLFLAGS)
+CXX=/usr/local/gcc/bin/g++ $(ALLFLAGS)
+CC=/usr/local/gcc/bin/gcc $(ALLFLAGS)
 #{cc_shared_content}
 LINK_SHARED=#{link_shared}
 
